@@ -1,3 +1,19 @@
+def setXHALLogLevel(xhalObj, level=1):
+    """
+    Sets the logging level on xhal object
+
+    xhalObj - object of a class inheriting from XHALDevice or XHALInterface
+
+    The meaning of level is given by:
+
+     0 - ERROR
+     1 - WARN
+     2 - INFO
+     3 - DEBUG
+     4 - TRACE
+    """
+    xhalObj.setLogLevel(level)
+    return
 
 def runCommand(cmd,log=None):
     """
